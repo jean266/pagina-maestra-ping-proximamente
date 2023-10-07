@@ -1,0 +1,197 @@
+
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+body {
+    @include m.tablet {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.container {
+    padding: 3rem;
+    color: v.$blue-very-dark;
+
+    @include m.tablet {
+        max-width: 80%;
+    }
+
+    @include m.desktop {
+        max-width: 50%;
+    }
+}
+
+.header {
+    text-align: center;
+    margin-top: 5rem;
+
+    .header_logo {
+        width: 8rem;
+        display: inline-block;
+
+        @include m.tablet {
+            width: 10rem;
+        }
+    }
+
+    .header_body {
+        margin-bottom: 5rem;
+
+        h1 {
+            font-size: 3rem;
+            color: v.$gray;
+
+            @include m.tablet {
+                font-size: 5rem;
+                margin-bottom: 0;
+            }
+
+            span {
+                font-weight: v.$bold;
+                color: v.$black;
+            }
+        }
+
+        p {
+            @include m.tablet {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    width: 90%;
+
+    @include m.desktop {
+        display: grid;
+        grid-template-columns: 2.5fr 1fr;
+        gap: 2rem;
+    }
+
+
+    input {
+        width: 100%;
+        padding: 1.5rem 4rem;
+        border: 1px solid v.$blue-pale;
+        border-radius: 3rem;
+        
+        @include m.tablet {
+            border-radius: 5rem;
+        }
+    }
+
+    input[type="text"] {
+
+        @include m.tablet {
+            font-size: 1.8rem;
+        }
+        
+        &:focus-visible {
+            outline: 2px solid v.$blue;
+        }
+
+        &::placeholder {
+            color: v.$blue-pale;
+        }
+
+        &.alert-input {
+            border: 2px solid v.$red-light;
+
+            &::placeholder {
+                color: v.$red-light;
+            }
+
+            &:focus-visible {
+                outline: 1px solid v.$red-light;
+            }
+        }
+
+    }
+
+    input[type="submit"] {
+        background-color: v.$blue;
+        border-color: v.$blue;
+        color: v.$white;
+        font-weight: v.$semibold;
+        box-shadow: 0px 0px 10px 0px lighten(v.$blue, 10);
+        margin-top: 2rem;
+        height: min-content;
+
+        @include m.desktop {
+            font-size: 1.8rem;
+            margin-top: 0;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: lighten(v.$blue, 10);
+            border-color: v.$blue-pale;
+        }
+
+    }
+
+    .alert {
+        margin: 0;
+        text-align: center;
+        font-size: 1.5rem;
+        color: v.$red-light;
+
+        @include m.tablet {
+            margin-top: 1rem;
+        }
+    }
+}
+
+.img_dashboard {
+    margin-top: 8rem;
+    margin-bottom: 15rem;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    .container_social {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 5rem;
+
+        .social_media {
+            padding: 1rem;
+            border: 1px solid v.$blue-pale;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: v.$blue;
+                cursor: pointer;
+
+                i {
+                    color: v.$white;
+                }
+            }
+
+            i {
+                display: inherit;
+                color: v.$blue;
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .text_footer {
+        font-size: 1.5rem;
+
+        @include m.tablet {
+            font-size: 1.8rem;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "pagina-maestra-ping-proximamente",
+  "version": "1.0.0",
+  "description": "Esta es una solución al [desafío de la página Ping próximamente en Frontend Mentor] (https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da). Los desafíos de Frontend Mentor lo ayudan a mejorar sus habilidades de codificación mediante la creación de proyectos realistas.",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "gulp dev"
+  },
+  "author": "Jean Carlo Gómez Narváez",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.69.0"
+  }
+}
