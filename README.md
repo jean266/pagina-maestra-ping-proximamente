@@ -40,7 +40,7 @@ Los usuarios deberían poder:
 ### Enlaces
 
 - URL de la solución: [GitHub](https://github.com/jean266/pagina-maestra-ping-proximamente)
-- URL del sitio en vivo: [Vercel](https://your-live-site-url.com)
+- URL del sitio en vivo: [Vercel](https://pagina-maestra-ping-proximamente.vercel.app/)
 
 ## Mi proceso
 
